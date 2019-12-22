@@ -2,11 +2,11 @@ import tkinter as tk
 
 from pytube import YouTube
 
-global E1
+global entry
 
 
 def downloadVid():
-    string =E1.get()
+    string = entry.get()
     yt = YouTube(str(string))
     print(yt.title)
 
@@ -20,8 +20,8 @@ w = tk.Label(root,text="Youtube Downloader")
 w.pack()
 
 
-E1 = tk.Entry(root,bd=5)
-E1.pack(side=tk.TOP)
+entry = tk.Entry(root,bd=5)
+entry.pack(side=tk.TOP)
 
 
 button = tk.Button(root, text="Download", fg="red", command=downloadVid)
